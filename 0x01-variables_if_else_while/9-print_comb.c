@@ -1,5 +1,4 @@
-  
-#include <stdio.h>
+ #include <stdio.h>
 /**
  * main - Prints numbers 1 to 10
  *
