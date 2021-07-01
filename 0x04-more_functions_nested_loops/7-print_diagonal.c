@@ -16,7 +16,7 @@ void print_diagonal(int n)
 		for (line = 0; line < n; line++)
 		{
 			/*print columns*/
-			for (spaces = 0; spaces < line; spaces ++)
+			for (spaces = 0; spaces < line; spaces++)
 			{
 				_putchar(' ');
 			}
