@@ -1,4 +1,5 @@
 #include "holberton.h"
+#define NULL 0
 /**
  * _strstr - locates a substring.
  *
@@ -9,14 +10,15 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
+	char *a = haystack, *b = needle;
 
-	for (i = 0; needle[i] && haystack[i]; i++)
+	for (;;)
 	{
-		for (; needle[i] != haystack[i]; haystack++)
+		if (!*b) return (char *) haystack;
+		if (!*a) return (NULL);
+		if (*a++ != *b++)
 		{
-			i = 0;
+			a = ++haystack; b = needle;
 		}
 	}
-	return ((needle[i]) ? 0 : (char *)haystack);
 }
