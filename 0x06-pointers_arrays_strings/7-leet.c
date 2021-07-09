@@ -3,52 +3,30 @@
 /**
  * leet - Endcodes a string into 1337.
  *
- * @a: the string being encoded.
- * @tobereplaced: the characters to be replaced.
- * @replacer: the characters that are replacing the original in the string.
+ * @s: the string being encoded.
  *
  *
  * Return: Returning the string.
  */
-char *replace_char(char *a, char tobereplaced, char replacer);
-
-char *leet(char *str)
+char *leet(char *s)
 {
-	str = replace_char(str, 'a', '4');
-	str = replace_char(str, 'A', '4');
-	str = replace_char(str, 'e', '3');
-	str = replace_char(str, 'E', '3');
-	str = replace_char(str, 'o', '0');
-	str = replace_char(str, 'O', '0');
-	str = replace_char(str, 't', '7');
-	str = replace_char(str, 'T', '7');
-	str = replace_char(str, 'l', '1');
-	str = replace_char(str, 'L', '1');
+	int i, j, k;
 
-	return (str);
-}
-/**
- * replace_char - replaces a character with another.
- *
- * @a: the string being encoded.
- * @tobereplaced: the characters to be replaced.
- * @replacer: the characters that are replacing the original in the string.
- *
- * Return: the string.
- */
-char *replace_char(char *a, char tobereplaced, char replacer)
-{
-	int length = 0;
+	char c[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char l[] = {'4', '3', '0', '7', '1'};
 
-	while (*a++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (*a == tobereplaced)
-		{
-			*a = replacer;
-		}
-		length++;
-	}
-	a -= length + 1;
+		k = 0;
 
-	return (a);
+		for (j = 0; j < 5; j++)
+		{
+			if (s[i] ==  c[k] || s[i] == c[k + 1])
+			{
+				s[i] = l[j];
+			}
+			k += 2;
+		}
+	}
+	return (s);
 }
