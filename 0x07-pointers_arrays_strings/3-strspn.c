@@ -6,7 +6,7 @@
  * @s: the string.
  * @accept: the bytes.
  *
- * Returns: initial segment of s.
+ * Return: initial segment of s.
  */
 unsigned int _strspn(char *s, char *accept)
 {
