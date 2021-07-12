@@ -10,7 +10,11 @@
  */
 int sqrtHELPER(int goal, int squirt)
 {
-	if (squirt <= 0)
+	if (goal == 1)
+	{
+		return (1);
+	}
+	else if (squirt <= 0)
 	{
 		return (-1);
 	}
