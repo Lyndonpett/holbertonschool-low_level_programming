@@ -38,7 +38,7 @@ char *leet(char *str)
  */
 char *replace_char(char *a, char tobereplaced, char replacer)
 {
-	int length = 2;
+	int length = 0;
 
 	while (*a++)
 	{
@@ -48,7 +48,7 @@ char *replace_char(char *a, char tobereplaced, char replacer)
 		}
 		length++;
 	}
-	a -= length - 1;
+	a -= length;
 
 	return (a);
 }
