@@ -40,12 +40,13 @@ char *replace_char(char *a, char tobereplaced, char replacer)
 {
 	int length = 0;
 
-	while (*a++)
+	while (*a)
 	{
 		if (*a == tobereplaced)
 		{
 			*a = replacer;
 		}
+		a++;
 		length++;
 	}
 	a -= length;
