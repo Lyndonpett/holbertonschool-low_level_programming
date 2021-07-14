@@ -1,0 +1,1 @@
+This directory is to help learn and understand argc and argv.
