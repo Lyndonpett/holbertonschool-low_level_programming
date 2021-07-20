@@ -23,6 +23,11 @@ char *str_concat(char *s1, char *s2)
 	}
 	rtn = q = malloc(len1 + len2 + 1);
 
+	if (rtn == NULL)
+	{
+		return (NULL);
+	}
+
 	for (p = s1; (*q = *p) != '\0'; p++, q++)
 	{
 	}
