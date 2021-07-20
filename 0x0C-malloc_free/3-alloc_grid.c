@@ -28,5 +28,6 @@ int **alloc_grid(int width, int height)
 	{
 		array[i] = malloc(width * sizeof(int));
 	}
+	array[i] = '\0';
 	return (array);
 }
