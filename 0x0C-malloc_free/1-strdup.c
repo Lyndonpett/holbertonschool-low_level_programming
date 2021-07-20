@@ -26,6 +26,11 @@ char *_strdup(char *str)
 	src = malloc(len + 1);
 	p = src;
 
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+
 	while (*str)
 	{
 		*p++ = *str++;
