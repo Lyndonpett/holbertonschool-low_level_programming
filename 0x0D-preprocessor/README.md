@@ -1,0 +1,1 @@
+This directory is to learn how to use the preprocessing steps in C.
