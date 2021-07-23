@@ -1,0 +1,1 @@
+This directory is to learn even more about malloc and free in C programming.
