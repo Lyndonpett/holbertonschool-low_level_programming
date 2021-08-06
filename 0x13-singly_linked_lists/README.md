@@ -1,0 +1,1 @@
+This repository is to understand single linked lists in C.
