@@ -20,5 +20,7 @@ int pop_listint(listint_t **head)
 	yeet = (*head)->next;
 	new_n = (*head)->n;
 	free(*head);
+	(*head) = yeet;
+
 	return (new_n);
 }
