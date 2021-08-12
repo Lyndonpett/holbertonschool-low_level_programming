@@ -1,10 +1,11 @@
 #include "holberton.h"
 
 /**
+ * print_binary - prints a binary number.
  *
+ * @n: the number to be printed.
  *
- *
- *
+ * Return: void.
  */
 
 void print_binary(unsigned long int n)
