@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int inputFD, outputFD, r;
-	char buff[1024];
+	char buf[1024];
 
 	if (argc != 3)
 	{
@@ -28,9 +28,9 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
-	while ((r = read(inputFD, buff, 1024)) > 0)
+	while ((r = read(inputFD, buf, 1024)) > 0)
 	{
-		if (write(outputFD, buff, r) != r)
+		if (write(outputFD, buf, r) != r)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 		}
