@@ -21,17 +21,16 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		zeNode = ht->array[i];
 		/* loop through data in node */
-		while (zeNode != NULL)
+		for (zeNode = ht->array[i]; zeNode; zeNode = zeNode->next)
 		{
 			/* prints comma after each node */
-			if (flag)
+			if (flag == 1)
 			{
 				printf(", ");
 			}
 			printf("'%s': '%s'", zeNode->key, zeNode->value);
 
 			flag = 1;
-			zeNode = zeNode->next;
 		}
 	}
 	printf("}\n");
