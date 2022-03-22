@@ -19,7 +19,7 @@ int advanced_binary(int *array, size_t size, int value)
 	}
 	/* first call of binaryRec to start recursion */
 	/* left starts at 0 index, right starts at end index */
-	return binaryRec(array, value, 0, (int)size - 1);
+	return (binaryRec(array, value, 0, (int)size - 1));
 }
 
 /**
@@ -49,7 +49,7 @@ int binaryRec(int *array, int value, int left, int right)
 			{
 				return (binaryRec(array, value, left, mid));
 			}
-			return mid;
+			return (mid);
 		}
 		/* if value is < mid, it can only be present in left subarray */
 		if (array[mid] > value)
